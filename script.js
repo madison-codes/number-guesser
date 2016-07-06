@@ -1,4 +1,6 @@
-var numberValue = (Math.floor(Math.random()*100));
+
+// var newRandNum = randNum();
+var randNum = numberRandom();
 //last number guessed
 var box = document.getElementById('box');
 //button press - submit guess
@@ -13,97 +15,53 @@ var reset = document.querySelector('.reset');
 var recentGuess = document.getElementById('recent-guess');
 var displayHint = document.getElementById('hint');
 
-document.addEventListener("DOMContentLoaded", function() {
+function numberRandom() {
+  return Math.floor(Math.random()*100);
+}
+// Input guess
+// if statement - returing hint
 
+// Clear
 
-  // recentGuess.innerHTML("WOW")
+clear.addEventListener('click', function() {
+  guessInput.value = "";
+  box.innerHTML = "<h1 id='latest-guess'>" + " " + "</h1>";
+  displayHint.innerHTML= "";
+});
+// reset button
 
-  // input field to guess number
-  //button to submit a guess
-  //displays most recent guess
-  //element that displays a message to user
-
-  // numberValue (guessInput, reset);
-  randomNumberGenerator(numberValue, reset);
-  grabAndDisplayGuess(guess, guessInput, displayHint);
-  clearGuess(clear, guessInput);
-
+reset.addEventListener('click', function(){
+  guessInput.value = "";
+  box.innerHTML = "<h1 id='latest-guess'>" + " " + "</h1>";
+  displayHint.innerHTML= "";
+  // function numberRandom()
 });
 
-var randomNumberGenerator = function (numberValue, reset) {
-  reset.addEventListener('click', function() {
-  randomNumberGenerator = (numberValue, reset);
+guess.addEventListener('click', function() {
+  var guess = guessInput.value;
+  box.innerHTML = "<h1 id='latest-guess'>" + guess + "</h1>";
+
+  if (guess===numberRandom) { displayHint.innerHTML="You Won!! Nice Work!"; }
+  if (guess>numberRandom) { displayHint.innerHTML="Your guess is too high! Try again."; }
+  if (guess<numberRandom) { displayHint.innerHTML="Your guess is too low! Please try again!"; }
+  box.innerHTML = "<h1 id='latest-guess'>" + " " + "</h1>";
 });
 
 
-var clearGuess = function(clear, guessInput) {
-  clear.addEventListener('click', function() {
-    guessInput.value = "";
-  });
-}
-
-var grabAndDisplayGuess = function(guess, guessInput,displayHint) {
-  guess.addEventListener('click',function(){
-    var guess = guessInput.value;
-    checkValue(guess,displayHint);
-    box.innerHTML = "<h1 id='latest-guess'>" + guess + "</h1>";
-});
-}
-
-var checkValue = function (guess, displayHint) {
-    if (guess===numberValue) {
-      displayHint.innerHTML="You Won!! Nice Work!";
-    } if (guess>numberValue) {
-      displayHint.innerHTML="Your guess is too high! Try again.";
-    } if (guess<numberValue) {
-      displayHint.innerHTML="Your guess is too low! Please try again!";
-    }
-}
-
-// console.log (randomNumberGenerator)
-
-  // function giveHint (){
-  //   var b = numberPlaceholder
-  //   var a = (ParseInt(Math.floor(Math.random()*100)));
-  //   if (b = a);
-  //     return "You WON! NICE WORK!"
-  //   else if (b > a);
-  //     return "Your guess is too high! Try again."
-  //   else
-  //     return "Your guess is too low. Try again."
-  // });
-//Random number generator
-
+// var grabAndDisplayGuess = function(guess, guessInput,displayHint) {
+//   guess.addEventListener('click',function() {
+//     var guess = guessInput.value;
+//     checkValue(guess,displayHint);
+//     box.innerHTML = "<h1 id='latest-guess'>" + guess + "</h1>";
+//   });
+// };
 //
-//
-//
-// //button to clearing the input field
-//
-// //button to resets game
-//
-//
-//
-// button.addEventListener ('click', function () {
-//   function Reset = (ParseInt(Math.floor(Math.random()*100)))
-// }
-//
-// button.addEventListener ('click', function (){
-//   bestGuess = "";
-// }
-//
-//
-// function giveHint (){
-//   var b = numberPlaceholder
-//   var a = (ParseInt(Math.floor(Math.random()*100)));
-//   if (b = a);
-//     return "You WON! NICE WORK!"
-//   else if (b > a);
-//     return "Your guess is too high! Try again."
-//   else
-//     return "Your guess is too low. Try again."
-// });
-//
-// bestGuess.addEventListener('click', function)
-// function clearValue(){
-//   return = "";
-// }
+// var checkValue = function (guess, displayHint) {
+//   if (guess===numberValue) {
+//     displayHint.innerHTML="You Won!! Nice Work!";
+//   } if (guess>numberValue) {
+//     displayHint.innerHTML="Your guess is too high! Try again.";
+//   } if (guess<numberValue) {
+//     displayHint.innerHTML="Your guess is too low! Please try again!";
+//   }
+// };
