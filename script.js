@@ -24,9 +24,8 @@ function numberRandom() {
 // Clear
 
 clear.addEventListener('click', function() {
+  box.innerHTML = "<h1 id='latest-guess'>" + guessInput.value + "</h1>";
   guessInput.value = "";
-  box.innerHTML = "<h1 id='latest-guess'>" + " " + "</h1>";
-  displayHint.innerHTML= "";
 });
 // reset button
 
@@ -44,7 +43,6 @@ guess.addEventListener('click', function() {
   if (guess===numberRandom) { displayHint.innerHTML="You Won!! Nice Work!"; }
   if (guess>numberRandom) { displayHint.innerHTML="Your guess is too high! Try again."; }
   if (guess<numberRandom) { displayHint.innerHTML="Your guess is too low! Please try again!"; }
-  box.innerHTML = "<h1 id='latest-guess'>" + " " + "</h1>";
 });
 
 
