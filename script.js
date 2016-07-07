@@ -64,6 +64,37 @@ function numberRandom() {
 function disableButton() {
   guessButton.disabled = (guessInputField.value === '');
 }
+// var grabAndDisplayGuess = function(guess, guessInput,displayHint) {
+//   guess.addEventListener('click',function() {
+//     var guess = guessInput.value;
+//     checkValue(guess,displayHint);
+//     box.innerHTML = "<h1 id='latest-guess'>" + guess + "</h1>";
+//   });
+// };
+//
+// var checkValue = function (guess, displayHint) {
+//   if (guess===numberValue) {
+//     displayHint.innerHTML="You Won!! Nice Work!";
+//   } if (guess>numberValue) {
+//     displayHint.innerHTML="Your guess is too high! Try again.";
+//   } if (guess<numberValue) {
+//     displayHint.innerHTML="Your guess is too low! Please try again!";
+//   }
+// };
+
+
+
+// function clearInputField(selector, inputField) {
+//   selector.disabled = (inputField.value === '');
+// }
+// clearInputField(guess, guessInput);
+
+//  “min” and a “max” attributes
+// display an error message if the guess is not a number (e.g. parseInt() returns NaN).
+// The application should display an error if the guess is outside of the range of possible answers.
+// The clear button should be disabled if there is nothing to clear.
+// The reset button should be disabled if there is nothing to reset.
+
 
 // function startGame() {
 // resetButton.disabled = true;
