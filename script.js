@@ -66,14 +66,13 @@ function disableButton() {
 }
 
 // function startGame() {
-// resetButton.disabled = true;
+//   resetButton.disabled = true;
 // }
 
 // startGame();
 // sets all the buttons to initial value
 // assigns a random value to randNum
-// calls disabledFunction()?
-
+// calls disabledFunction()
 // group your event listeners
 // in startGame: bindEventListeners();
 // bindEventListeners: gathers all event listeners in one function
