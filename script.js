@@ -62,7 +62,6 @@ function getHint() {
   if (guess < randNum) return "Your guess is too low! Please try again!";
   return "You Won!! Nice Work!";
 }
-
 function isValidGuess() {
   var guess = parseInt(guessInput.value);
   return (!Number.isNaN(guess) && guess >= min && guess < max);
