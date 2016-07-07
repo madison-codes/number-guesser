@@ -1,0 +1,18 @@
+#box {
+  background-color: aqua;
+  width: 200px;
+  height: 50px;
+  border: 5px;
+  border-color: black;
+}
+
+#latest-guess {
+  background-color: teal;
+  text-align: center;
+}
+
+#correctNumber {
+  background-color: red;
+  text-align: center;
+  text-color: white;
+}
