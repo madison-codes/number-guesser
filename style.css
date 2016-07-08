@@ -1,18 +1,79 @@
+body {
+ font-family: 'Secular One', sans-serif;
+ background: url(number-bkgd.jpg) no-repeat;
+ background-size: cover;
+ min-height: 600px;
+}
+
+.title h1 {
+ color: #3E0756 ;
+}
+
+h1 {
+ font-family: 'Candal', sans-serif;
+ text-align: center;
+ font-size: 100px;
+ margin: 20px;
+}
+
+h2 {
+ font-family: 'Candal', sans-serif;
+ text-align: center;
+ font-size: 50px;
+ margin: 20px;
+}
+
+p {
+ font-family: 'Candal', sans-serif;
+ text-align: center;
+ font-size: 25px;
+ margin: 20px;
+}
+
 #box {
-  background-color: aqua;
-  width: 200px;
-  height: 50px;
-  border: 5px;
-  border-color: black;
+ background-color: aqua;
+ width: 400px;
+ height: 200px;
+ border: 5px solid black;
+ margin: auto;
+ margin-bottom: 30px;
 }
 
 #latest-guess {
-  background-color: teal;
-  text-align: center;
+ background-color: #3E0756 ;
+ color: white;
+ text-align: center;
+ height: 150px;
+ margin: 25px;
 }
 
+
 #correctNumber {
-  background-color: red;
-  text-align: center;
-  text-color: white;
+ background-color: red;
+ text-align: center;
+ color: white;
+
+}
+
+#hint {
+ text-align: center;
+ font-size: 40px;
+}
+
+input {
+ display: block;
+ margin: auto;
+ margin-top: 10px;
+ margin-bottom: 20px;
+ height: 20px;
+ width: 150px;
+}
+
+button {
+ color: black;
+ display: block;
+ margin: auto;
+ margin-bottom: 10px;
+ width: 100px;
+ height: 30px;
 }

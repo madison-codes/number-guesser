@@ -3,20 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Number Guesser</title>
-    <link rel='stylesheet' href="style.css" title="Style Sheet">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
   </head>
   <body>
-    <h1>Number Guesser</h1>
+    <h1 class="title">Number Guesser</h1>
+    <h2>Guess any number</h2>
+    <p>Enter a number to begin.</p>
       <div id="recent-guess"></div>
       <div id='box'></div>
       <div id='hint'></div>
       <div>
-        <input id="guess-input-field"></input placeholder="Input best guess">
-        <button class="guess-button">Guess</button>
-        <button class="clear-field-button">Clear</button>
-        <button class="reset-button">Reset Game</button>
+        <input id="guess-input-field" type = number placeholder = "Input guess"></input>
+        <button class="guess-button" disabled>Guess</button>
+        <button class="clear-field-button" disabled>Clear</button>
+        <button class="reset-button" disabled>Reset Game</button>
       </div>
 
-      <script src="script.js"></script>
+      <div class = 'advanced-fields'>
+        <input id = "input-max" type = number placeholder = "Max"></input>
+        <input id = "input-min" type = number placeholder = "Min"></input>
+        <button id = "submit-min-and-max" disabled>Submit</button>
+      </div>
+    <script src="script.js"></script>
   </body>
 <html>
